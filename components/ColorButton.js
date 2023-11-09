@@ -2,15 +2,15 @@ import React from 'react';
 import { Text, StyleSheet, Pressable } from 'react-native';
 import PropTypes from 'prop-types';
 
-export default function Button({title}) {
+export default function ColorButton({color}) {
 
   const pressButton = () => {
-    console.log(title + 'button pressed')
+    console.log(color + 'button pressed')
   }
 
   return (
-    <Pressable style={styles.button} onPress={pressButton}>
-      <Text style={styles.text}>{title}</Text>
+    <Pressable style={styles.button} backgroundColor={color} onPress={pressButton}>
+      <Text style={styles.text}>{color}</Text>
     </Pressable>
   );
 }
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'red',
+    backgroundColor: 'green',
   },
   text: {
     fontSize: 16,
@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
   },
 });
 
-Button.propTypes = {
-  title: PropTypes.string.isRequired,
+ColorButton.propTypes = {
+  color: PropTypes.string.isRequired,
 };
