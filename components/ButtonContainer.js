@@ -14,12 +14,10 @@ export default function ButtonContainer({containerName, buttonLabels}) {
       buttonCollection = buttonLabels.map((label, i) => {
         return <PatternButton pattern={label} key={i}></PatternButton>
       });
-    }
-
-    if (containerName === "colors") {
-      buttonCollection = buttonLabels.map((label, i) => {
-        return <ColorButton color={label} key={i}></ColorButton>
-      });
+    } else if (containerName === "colors") {
+      for (let index in buttonLabels) {
+        buttonCollection.push(<ColorButton color={index} rgb={buttonLabels[index]} key={index}></ColorButton>)
+      }
     }
 
     return buttonCollection;
@@ -35,5 +33,5 @@ export default function ButtonContainer({containerName, buttonLabels}) {
 
 ButtonContainer.propTypes = {
   containerName: PropTypes.string.isRequired,
-  buttonLabels: PropTypes.array.isRequired
+  buttonLabels: PropTypes.any.isRequired
 };
