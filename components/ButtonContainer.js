@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 import PatternButton from './PatternButton'
 import ColorButton from './ColorButton';
@@ -12,7 +12,7 @@ export default function ButtonContainer({containerName, buttonLabels}) {
 
     if (containerName === "patterns") {
       buttonCollection = buttonLabels.map((label, i) => {
-        return <PatternButton title={label} key={i}></PatternButton>
+        return <PatternButton pattern={label} key={i}></PatternButton>
       });
     }
 
@@ -26,7 +26,8 @@ export default function ButtonContainer({containerName, buttonLabels}) {
   }
 
   return (
-    <View> 
+    <View>
+      <Text>{containerName}</Text>
       {makeButtonCollection()}
     </View>
   );

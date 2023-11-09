@@ -1,16 +1,23 @@
 import React from 'react';
 import { Text, StyleSheet, Pressable } from 'react-native';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
-export default function PatternButton({title}) {
+export default function PatternButton({pattern}) {
 
-  const pressButton = () => {
-    console.log(title + ' button pressed')
+  const changePattern = () => {
+    axios.patch(`https://hex-ights.firebaseio.com/.json?auth=` + process.env.REACT_APP_FB_AUTH_KEY, {"pattern": pattern})
+    .then((response) => {
+        console.log(response + ` successfully changed pattern to ` + pattern)
+    })
+    .catch((error) => {
+        console.log(error + ` pattern was not successfully changed to ` + pattern)
+    });
   }
 
   return (
-    <Pressable style={styles.button} onPress={pressButton}>
-      <Text style={styles.text}>{title}</Text>
+    <Pressable style={styles.button} onPress={changePattern}>
+      <Text style={styles.text}>{pattern}</Text>
     </Pressable>
   );
 }
@@ -35,5 +42,5 @@ const styles = StyleSheet.create({
 });
 
 PatternButton.propTypes = {
-  title: PropTypes.string.isRequired,
+  pattern: PropTypes.string.isRequired,
 };
