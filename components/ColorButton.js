@@ -6,7 +6,8 @@ import axios from 'axios';
 export default function ColorButton({color, rgb}) {
 
   const changeColor = () => {
-    axios.patch(`https://hex-ights.firebaseio.com/.json?auth=` + process.env.REACT_APP_FB_AUTH_KEY, {"red": rgb[0], "green": rgb[1], "blue": rgb[2]})
+    axios.patch(`https://hex-ights.firebaseio.com/.json?auth=` + 
+    process.env.REACT_APP_FB_AUTH_KEY, {"red": rgb[0], "green": rgb[1], "blue": rgb[2]})
     .then((response) => {
         console.log(response + ` successfully changed color to ` + color)
     })

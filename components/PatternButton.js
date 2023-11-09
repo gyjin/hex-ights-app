@@ -6,7 +6,8 @@ import axios from 'axios';
 export default function PatternButton({pattern}) {
 
   const changePattern = () => {
-    axios.patch(`https://hex-ights.firebaseio.com/.json?auth=` + process.env.REACT_APP_FB_AUTH_KEY, {"pattern": pattern})
+    axios.patch(`https://hex-ights.firebaseio.com/.json?auth=` + 
+    process.env.REACT_APP_FB_AUTH_KEY, {"pattern": pattern})
     .then((response) => {
         console.log(response + ` successfully changed pattern to ` + pattern)
     })
