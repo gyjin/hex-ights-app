@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export default function Button({title}) {
 
-const pressButton = () => {
+  const pressButton = () => {
     console.log(title + 'button pressed')
   }
 

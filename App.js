@@ -2,6 +2,7 @@ import React from 'react'
 import Button from './components/Button';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import ButtonContainer from './components/ButtonContainer';
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Text>Hello Hexights!</Text>
       <StatusBar style="auto" />
       <Button title={"i'm a button"}></Button>
+      <ButtonContainer containerName={"patterns"} buttonLabels={["button", "label", "in", "array"]}></ButtonContainer>
 
     </View>
   );
