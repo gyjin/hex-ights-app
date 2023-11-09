@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function ColorButton({color}) {
 
   const pressButton = () => {
-    console.log(color + 'button pressed')
+    console.log(color + ' button pressed')
   }
 
   return (
@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'green',
   },
   text: {
     fontSize: 16,

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function PatternButton({title}) {
 
   const pressButton = () => {
-    console.log(title + 'button pressed')
+    console.log(title + ' button pressed')
   }
 
   return (
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'red',
+    backgroundColor: 'black',
   },
   text: {
     fontSize: 16,
