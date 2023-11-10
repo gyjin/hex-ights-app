@@ -10,7 +10,9 @@ export default function App() {
     <View style={styles.container}>
       <ImageBackground source={image} style={styles.image}>
         <StatusBar style="auto"/>
-        <Text style={styles.title}>Hello Hexights!</Text>
+        <Text style={styles.title}>Hex-ights</Text>
+        <View style={styles.line} />
+        <Text style={styles.slogan}>light up your life!</Text>
         <Text style={styles.buttonContainerLabel}>Patterns:</Text>
         <ButtonContainer containerName={"patterns"} buttonLabels={
           [
@@ -52,10 +54,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   title: {
-    marginTop: 10,
-    fontSize: 50,
+    marginTop: 40,
+    fontSize: 60,
+    fontWeight: 'bold',
     color: 'white',
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    alignSelf: 'center'
+  },
+  line: {
+    borderBottomColor: 'white',
+    borderBottomWidth: 2,
+    marginVertical: 2,
+    width: '75%',
+    alignSelf: 'center'
+  },
+  slogan: {
+    fontSize: 30,
+    fontStyle: 'italic',
+    color: 'white',
+    backgroundColor: 'transparent',
+    alignSelf: 'center'
   },
   buttonContainerLabel: {
     color: 'white',
