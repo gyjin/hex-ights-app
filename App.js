@@ -18,7 +18,7 @@ export default function App() {
         </View>
 
 
-        <Text style={styles.buttonContainerLabel}>Patterns:</Text>
+        <Text style={styles.buttonContainerLabel}>Patterns</Text>
         <ButtonContainer containerName={"patterns"} buttonLabels={
           [
             "solid",
@@ -30,7 +30,7 @@ export default function App() {
             "off"
           ]
         }></ButtonContainer>
-        <Text style={styles.buttonContainerLabel}>Colors:</Text>
+        <Text style={styles.buttonContainerLabel}>Colors</Text>
         <ButtonContainer containerName={"colors"} buttonLabels={
           {
             "red": [20, 0, 0],
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
   buttonContainerLabel: {
     color: 'white',
     fontSize: 25,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    alignSelf: 'center'
   }
 });
