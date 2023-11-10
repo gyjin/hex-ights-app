@@ -11,6 +11,7 @@ export default function App() {
       <ImageBackground source={image} style={styles.image}>
         <StatusBar style="auto"/>
         <Text style={styles.title}>Hello Hexights!</Text>
+        <Text style={styles.buttonContainerLabel}>Patterns:</Text>
         <ButtonContainer containerName={"patterns"} buttonLabels={
           [
             "solid",
@@ -22,6 +23,7 @@ export default function App() {
             "off"
           ]
         }></ButtonContainer>
+        <Text style={styles.buttonContainerLabel}>Colors:</Text>
         <ButtonContainer containerName={"colors"} buttonLabels={
           {
             "red": [20, 0, 0],
@@ -54,5 +56,10 @@ const styles = StyleSheet.create({
     fontSize: 50,
     color: 'white',
     backgroundColor: 'transparent'
+  },
+  buttonContainerLabel: {
+    color: 'white',
+    fontSize: 25,
+    fontWeight: 'bold'
   }
 });

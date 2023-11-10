@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import PatternButton from './PatternButton'
 import ColorButton from './ColorButton';
@@ -24,10 +24,7 @@ export default function ButtonContainer({containerName, buttonLabels}) {
   }
 
   return (
-    <View>
-      <Text>{containerName}</Text>
-      {makeButtonCollection()}
-    </View>
+    <View>{makeButtonCollection()}</View>
   );
 }
 
