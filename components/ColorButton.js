@@ -34,11 +34,11 @@ const styles = StyleSheet.create({
     borderRadius: 10
   },
   text: {
-    fontSize: 16,
+    fontSize: 20,
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
-    color: 'white',
+    color: 'black'
   },
 });
 
