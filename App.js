@@ -11,25 +11,27 @@ export default function App() {
       <ImageBackground source={image} style={styles.image}>
         <StatusBar style="auto"/>
 
-        <View style={styles.topView}>
+        <View style={styles.header}>
           <Text style={styles.title}>Hex-ights</Text>
           <View style={styles.line} />
           <Text style={styles.slogan}>light up your life!</Text>
         </View>
 
+        <View style={styles.buttonContainer}>
+          <Text style={styles.buttonContainerLabel}>Patterns</Text>
+          <ButtonContainer containerName={"patterns"} buttonLabels={
+            [
+              "solid",
+              "blink",
+              "wave",
+              "fade",
+              "twinkle",
+              "run",
+              "off"
+            ]
+          }></ButtonContainer>
+        </View>
 
-        <Text style={styles.buttonContainerLabel}>Patterns</Text>
-        <ButtonContainer containerName={"patterns"} buttonLabels={
-          [
-            "solid",
-            "blink",
-            "wave",
-            "fade",
-            "twinkle",
-            "run",
-            "off"
-          ]
-        }></ButtonContainer>
         <Text style={styles.buttonContainerLabel}>Colors</Text>
         <ButtonContainer containerName={"colors"} buttonLabels={
           {
@@ -58,12 +60,12 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center'
   },
-  topView: {
+  header: {
     position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
-    paddingTop: 60
+    paddingTop: 50
   },
   title: {
     marginTop: 40,
@@ -86,6 +88,10 @@ const styles = StyleSheet.create({
     color: 'white',
     backgroundColor: 'transparent',
     alignSelf: 'center'
+  },
+  buttonContainer: {
+    marginTop: 100,
+    marginBottom: 20
   },
   buttonContainerLabel: {
     color: 'white',
