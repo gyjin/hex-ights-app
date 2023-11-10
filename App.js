@@ -10,9 +10,14 @@ export default function App() {
     <View style={styles.container}>
       <ImageBackground source={image} style={styles.image}>
         <StatusBar style="auto"/>
-        <Text style={styles.title}>Hex-ights</Text>
-        <View style={styles.line} />
-        <Text style={styles.slogan}>light up your life!</Text>
+
+        <View style={styles.topView}>
+          <Text style={styles.title}>Hex-ights</Text>
+          <View style={styles.line} />
+          <Text style={styles.slogan}>light up your life!</Text>
+        </View>
+
+
         <Text style={styles.buttonContainerLabel}>Patterns:</Text>
         <ButtonContainer containerName={"patterns"} buttonLabels={
           [
@@ -45,13 +50,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   image: {
     flex: 1,
     resizeMode: 'cover',
     width: '100%',
     justifyContent: 'center'
+  },
+  topView: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    paddingTop: 60
   },
   title: {
     marginTop: 40,
