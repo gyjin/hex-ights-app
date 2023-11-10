@@ -9,8 +9,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ImageBackground source={image} style={styles.image}>
-        <Text style={styles.header}>Hello Hexights!</Text>
-        <StatusBar style="auto" />
+        <StatusBar style="auto"/>
+        <Text style={styles.title}>Hello Hexights!</Text>
         <ButtonContainer containerName={"patterns"} buttonLabels={
           [
             "solid",
@@ -49,12 +49,10 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center'
   },
-  header: {
-    height: 100,
+  title: {
+    marginTop: 10,
     fontSize: 50,
     color: 'white',
-    backgroundColor: 'transparent',
-    alignItems: 'center',
-    justifyContent: 'center'
+    backgroundColor: 'transparent'
   }
 });
